@@ -18,6 +18,13 @@ export default function (){
             animation: "fade",
           }}
         />
+        <Stack.Screen
+          name="new"
+          options={{
+            presentation: "modal",
+            title: "New Plant Form",
+          }}
+        />
       </Stack>
     );
 }

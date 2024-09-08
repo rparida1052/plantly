@@ -1,12 +1,13 @@
 import {  Text } from 'react-native'
 import React from 'react'
-import {  Redirect, Tabs } from 'expo-router'
+import {  Redirect, Tabs,Link } from 'expo-router'
 import Entypo from '@expo/vector-icons/Entypo';
 import Feather from "@expo/vector-icons/Feather";
 import { theme } from '@/theme';
 import { useStore } from 'zustand';
 import { useUserStore } from '@/store/useStore';
-
+import AntDesign from "@expo/vector-icons/AntDesign";
+import { Pressable } from "react-native";
 
 const RootLayout = () => {
     const hasOnboarded = useUserStore(store => store.hasOnboarded);
@@ -30,6 +31,17 @@ const RootLayout = () => {
           ),
           tabBarIcon: ({ size, color }) => (
             <Entypo name="leaf" size={size} color={color} />
+          ),
+          headerRight: () => (
+            <Link href="/new" asChild>
+              <Pressable hitSlop={20} style={{ marginRight: 18 }}>
+                <AntDesign
+                  name="pluscircleo"
+                  size={24}
+                  color={theme.colorGreen}
+                />
+              </Pressable>
+            </Link>
           ),
         }}
       />
