@@ -4,14 +4,17 @@ import {  Redirect, Tabs } from 'expo-router'
 import Entypo from '@expo/vector-icons/Entypo';
 import Feather from "@expo/vector-icons/Feather";
 import { theme } from '@/theme';
-const hasFinishedOnboarding = false;
+import { useStore } from 'zustand';
+import { useUserStore } from '@/store/useStore';
 
 
 const RootLayout = () => {
-  if (!hasFinishedOnboarding) {
-    return <Redirect href="/onboarding" />;
-  }
+    const hasOnboarded = useUserStore(store => store.hasOnboarded);
+    if (!hasOnboarded) {
+      return <Redirect href="/onboarding"/>
+    }
   return (
+    
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: theme.colorGreen,
