@@ -14,7 +14,7 @@ export default function (){
         <Stack.Screen
           name="onboarding"
           options={{
-            
+            headerShown: false,
             animation: "fade",
           }}
         />
