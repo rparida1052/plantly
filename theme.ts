@@ -6,4 +6,6 @@ export const theme = {
   colorWhite: "#fff",
   colorLightGrey: "#eee",
   colorBlack: "#000",
+  colorGrey: "#808080",
+  colorRed: "#E21212",
 };

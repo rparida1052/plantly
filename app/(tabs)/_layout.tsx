@@ -23,26 +23,17 @@ const RootLayout = () => {
        
       >
       <Tabs.Screen
-        name="index"
+        name="(home)"
         options={{
           title: "Home",
+          headerShown:false,
           tabBarLabel: ({ color, position }) => (
             <Text style={{ color: color }}>Home</Text>
           ),
           tabBarIcon: ({ size, color }) => (
             <Entypo name="leaf" size={size} color={color} />
           ),
-          headerRight: () => (
-            <Link href="/new" asChild>
-              <Pressable hitSlop={20} style={{ marginRight: 18 }}>
-                <AntDesign
-                  name="pluscircleo"
-                  size={24}
-                  color={theme.colorGreen}
-                />
-              </Pressable>
-            </Link>
-          ),
+         
         }}
       />
       <Tabs.Screen
