@@ -19,7 +19,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.rparida1053.plantly"
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -27,6 +28,15 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "78885130-c02b-4fc1-b421-1d11419f6729"
+      }
+    },
+    "owner": "rparida1053"
   }
 }
